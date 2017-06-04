@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<title>Prompt Box</title>
+
+	<body>
+
+		<h1>JavaScript Popup Boxes Tutorial</h1>
+
+		<h2>Example #1: Alert Box</h2>
+
+		<button onclick="alertFunction()">Click Here</button>
+	
+
+		<h2>Example #2: Confirm Box</h2>
+
+		<button onclick="confirmFunction()">Click Here</button>
+
+		<p id="ex2"></p>
+
+
+		
+		<h2>Example #3:Prompt Box</h2>
+
+		<button onclick="promptFunction()">Click Here</button>
+
+		<p id="ex3"></p>
+
+		<script>
+			function alertFunction() {
+    				alert("I am an alert box!");
+			}
+
+			function confirmFunction() {
+    				var txt;
+				
+				if(confirm("Press a button") == true) {
+					txt = "You pressed OK";	
+				} else {
+					txt = "You pressed Cancel";
+				}
+
+				document.getElementById("ex2").innerHTML = txt;
+			}
+
+			function promptFunction() {
+    				var txt;
+				
+				var user = prompt("Please enter your name:", "Anonymous");
+
+				if(user == null || user  == "") {
+					txt = "User cancelled the prompt.";
+				} else {
+					txt = "Welcome " + user;
+				}
+
+				document.getElementById("ex3").innerHTML = txt;
+			}
+		</script>
+
+	</body>
+</html>
